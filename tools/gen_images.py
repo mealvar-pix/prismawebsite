@@ -181,6 +181,18 @@ def tile(name, motif, seed):
         c.set_source_rgba(*lb, .2); c.fill()
         c.set_source_rgba(*lb, 1); c.set_line_width(3.5); c.move_to(*pts[0]); [c.line_to(*p) for p in pts[1:]]; c.stroke()
         c.set_source_rgba(*gr, .9); c.set_line_width(2); c.set_dash([6, 6]); c.move_to(40, 215); c.line_to(604, 215); c.stroke()
+    elif motif == 'fleet':
+        c.set_source_rgba(*lb, .5); c.set_line_width(2); c.set_dash([8, 6])
+        c.move_to(60, 60); c.line_to(330, 45); c.line_to(350, 250); c.line_to(80, 280); c.close_path(); c.stroke(); c.set_dash([])
+        for i in range(6):
+            c.set_source_rgba(*gr, .55); c.set_line_width(9)
+            c.move_to(85, 80 + i * 30); c.line_to(325 if i < 5 else 220, 66 + i * 30); c.stroke()
+        c.set_source_rgba(*gr, 1); c.arc(220, 216, 9, 0, 2 * math.pi); c.fill()
+        c.set_source_rgba(*lb, .9); c.set_line_width(2.5); c.set_dash([2, 9])
+        c.move_to(350, 230); c.curve_to(420, 250, 400, 320, 560, 300); c.stroke(); c.set_dash([])
+        for (x, y) in [(372, 238), (398, 262), (430, 292), (480, 302), (520, 300)]:
+            c.set_source_rgba(*lb, 1); c.arc(x, y, 3.5, 0, 2 * math.pi); c.fill()
+        c.set_source_rgba(1, 1, 1, .95); c.rectangle(548, 292, 26, 15); c.fill()
     elif motif == 'data':
         for r in range(7):
             for k in range(14):
@@ -195,7 +207,7 @@ if __name__ == '__main__':
     aerial(1600, 1000, 23, scale=1.5, angle=8).save(os.path.join(OUT, 'band-aerial.jpg'), quality=80, optimize=True, progressive=True)
     for i, (n, m) in enumerate([('produccion', 'forecast'), ('agronomia', 'field'), ('mano-de-obra', 'labor'),
                                 ('materiales', 'materials'), ('costos', 'cost'), ('compras', 'suppliers'),
-                                ('finanzas', 'cash'), ('datos', 'data')]):
+                                ('finanzas', 'cash'), ('datos', 'data'), ('activos', 'fleet')]):
         tile(n, m, i + 3)
     # OG image
     base = Image.open(os.path.join(OUT, 'hero-aerial.jpg')).resize((1200, 700)).crop((0, 35, 1200, 665))

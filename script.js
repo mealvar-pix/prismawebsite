@@ -167,7 +167,8 @@ const PRISMA_CONFIG = {
   const groups = {
     inicio: ['inicio'],
     'que-hacemos': ['que-hacemos', 'metodologia', 'servicios', 'programas', 'valor'],
-    capacidades: ['capacidades'], intelligence: ['intelligence'], nosotros: ['nosotros'], insights: ['insights'], contacto: ['contacto']
+    capacidades: ['capacidades', 'activos'],
+    intelligence: ['intelligence'], nosotros: ['nosotros'], insights: ['insights'], contacto: ['contacto']
   };
   const owner = {};
   Object.entries(groups).forEach(([k, ids]) => ids.forEach((id) => { owner[id] = k; }));

@@ -1,4 +1,6 @@
-# PRISMA Inteligente · sitio web
+# PRISMA Inteligente · sitio web (v2.0)
+
+Versión 2.0: integra la dimensión de activos, flota y tecnología operacional (ver `CHANGELOG.md`).
 
 Sitio corporativo estático (HTML5 + CSS + JavaScript, sin dependencias ni build).
 
@@ -14,13 +16,13 @@ prisma-web/
 │   └── img/
 │       ├── hero-aerial.jpg      Hero (PLACEHOLDER generado)
 │       ├── band-aerial.jpg      Franja metodología + insight destacado (PLACEHOLDER)
-│       ├── cap-*.jpg            8 miniaturas de capacidades (gráficos)
+│       ├── cap-*.jpg            9 miniaturas de capacidades (gráficos)
 │       └── og-image.jpg         Imagen para redes sociales 1200×630
 ├── netlify.toml        Cabeceras y caché para Netlify
 └── tools/gen_images.py Script que generó las imágenes provisionales
 ```
 
-Secciones y anclas: `#inicio` · `#que-hacemos` (Todo está conectado) · `#metodologia` · `#servicios` · `#intelligence` · `#capacidades` · `#programas` · `#valor` · `#nosotros` (`#fundadores`) · `#insights` · `#contacto`.
+Secciones y anclas: `#inicio` · `#que-hacemos` (Todo está conectado) · `#metodologia` · `#servicios` · `#intelligence` · `#capacidades` · `#activos` (Activos, flota y tecnología operacional) · `#programas` · `#valor` · `#nosotros` (`#fundadores`) · `#insights` · `#contacto`.
 
 ## 2. Ejecutar localmente
 
