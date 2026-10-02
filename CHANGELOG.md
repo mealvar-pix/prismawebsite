@@ -1,5 +1,18 @@
 # PRISMA Inteligente · CHANGELOG
 
+## v2.1 — Programas más fáciles de entender (2026-10-02)
+
+| Tipo | Cambio |
+| --- | --- |
+| MODIFY | Programas: el texto de cabecera explica la relación programa (problema de negocio) → módulos (áreas que se diagnostican). |
+| ADD | Programas: guía de lectura en tres pasos ("Elija el problema", "Vea qué áreas revisamos", "O empiece por un área"). |
+| MODIFY | La leyenda de módulos M1–M9 pasa de la última tarjeta a un panel antes de los programas, y cada módulo es un botón que filtra: resalta los programas que lo incluyen y muestra cuántos son. |
+| MODIFY | Etiquetas de módulos con código y nombre corto (p. ej. "M4 Mano de obra"), bajo el título "Áreas que diagnosticamos" y en orden numérico. |
+| MODIFY | "M3*" pasa a una etiqueta punteada "M3 Flota · si aplica"; se elimina la nota "* cuando aplique". |
+| ADD | Subtítulo en español para cada programa (los nombres en inglés se mantienen). |
+| MODIFY | Management Control Transformation se muestra como programa integral destacado, a todo el ancho, con los nueve módulos. |
+| ADD | Cierre de la sección: "¿No sabe por cuál programa empezar?" con botón a contacto. |
+
 ## v2.0 — Activos, flota y tecnología operacional (2026-09-27)
 
 **Alcance de esta versión.** v2.0 cubre los tres materiales que existen hoy: la página web (este repositorio), el video animatic y el documento de storyboard/producción. La metodología maestra, el catálogo comercial, el portafolio, la especificación de PRISMA Intelligence y las presentaciones no se revisaron, porque no estaban disponibles. Cuando se incorporen, deben alinearse con la terminología de este archivo.

@@ -267,3 +267,41 @@ const PRISMA_CONFIG = {
     }
   });
 })();
+
+/* ---------- Programas: filtrar por módulo de diagnóstico ---------- */
+(function () {
+  const box = document.querySelector('.mod-filter');
+  if (!box) return;
+  const btns = Array.from(box.querySelectorAll('.mod-btn'));
+  const cards = Array.from(document.querySelectorAll('.cards-programs .program'));
+  const status = box.querySelector('.mod-status');
+  const reset = box.querySelector('.mod-reset');
+  const idle = status.textContent;
+  let current = null;
+
+  function apply(mod) {
+    current = mod;
+    let n = 0;
+    cards.forEach((c) => {
+      const match = !mod || c.dataset.mods.split(' ').includes(mod);
+      if (mod && match) n++;
+      c.classList.toggle('is-dim', !!mod && !match);
+      c.classList.toggle('is-match', !!mod && match);
+    });
+    btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mod === mod)));
+    reset.hidden = !mod;
+    if (mod) {
+      const btn = btns.find((b) => b.dataset.mod === mod);
+      const name = btn.querySelector('span').textContent;
+      status.innerHTML = '';
+      const s = document.createElement('strong');
+      s.textContent = `${n} de ${cards.length} programas`;
+      status.append(s, ` incluyen ${mod} · ${name}.`);
+    } else {
+      status.textContent = idle;
+    }
+  }
+
+  btns.forEach((b) => b.addEventListener('click', () => apply(current === b.dataset.mod ? null : b.dataset.mod)));
+  reset.addEventListener('click', () => apply(null));
+})();
