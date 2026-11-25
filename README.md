@@ -14,3 +14,6 @@ No requiere build ni dependencias. Se abre con doble clic o se publica tal cual 
 - Fotos de los socios y de fincas: reemplazar por originales en alta resolución.
 
 La versión anterior (v2.0 de 12 secciones) queda en el historial de git.
+
+## Elementos permanentes
+- `<meta name="google-site-verification" …>` en el `<head>` de `index.html`: verifica la propiedad en Google Search Console. **No eliminar** en futuras versiones.
