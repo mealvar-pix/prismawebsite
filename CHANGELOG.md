@@ -1,5 +1,13 @@
 # PRISMA Inteligente · CHANGELOG
 
+## v2.3 — Bloque 3: exhibición tecnológica (2026-11-25, pendiente de aprobación)
+
+- Sección Tecnología: vitrina de **PRISMA Budget Intelligence** con 5 capturas reales de la aplicación (v0.5.1-beta) tomadas con datos ficticios de demostración (empresa «Agrícola Demo S.A.», fincas DEMO-N/S/E/O). Pestañas accesibles: Consolidado, Por finca, Por actividad, Actividad × finca, Escenarios.
+- Problema que resuelve, beneficios por público, lista «Funciona hoy» / «En desarrollo» y nota de carga por Excel y CSV (sin integraciones ERP).
+- **PRISMA Cost Intelligence** pasa a «En desarrollo y validación», con sus capacidades de análisis y sin capturas (el prototipo usa datos reales).
+- Tarjeta Budget: «control» → «aprobación» (el control presupuestario aún no está implementado).
+- Imágenes WebP en `img/` (760 y 1400 px, carga diferida). Sin cambios en las demás secciones, la etiqueta de Google Search Console ni el canonical.
+
 ## v2.0 — Activos, flota y tecnología operacional (2026-09-27)
 
 **Alcance de esta versión.** v2.0 cubre los tres materiales que existen hoy: la página web (este repositorio), el video animatic y el documento de storyboard/producción. La metodología maestra, el catálogo comercial, el portafolio, la especificación de PRISMA Intelligence y las presentaciones no se revisaron, porque no estaban disponibles. Cuando se incorporen, deben alinearse con la terminología de este archivo.
