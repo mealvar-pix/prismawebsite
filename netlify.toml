@@ -2,7 +2,7 @@
   publish = "."
 
 # Dominio único: la dirección de Netlify redirige al dominio propio.
-# Netlify ya redirige www -> dominio principal y http -> https cuando el certificado está activo.
+# HTTP -> HTTPS y HSTS (max-age=31536000) los aplica Netlify automáticamente en el dominio.
 [[redirects]]
   from = "https://prismainteligente.netlify.app/*"
   to = "https://prismainteligente.com/:splat"
@@ -15,5 +15,3 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
-    # HSTS conservador (1 día) hasta confirmar HTTPS estable; luego subir a 1 año.
-    Strict-Transport-Security = "max-age=86400"
