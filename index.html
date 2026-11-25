@@ -363,6 +363,41 @@ form.wa .hint{font-size:.9rem;color:var(--muted);margin-top:6px}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,101,192,.2)}
 .field .err{font-size:.85rem;color:#B42318;min-height:1em}
 form.wa .btn{margin-top:18px;width:100%;justify-content:center}
+.fields > .full{grid-column:1/-1}
+.contact-group > .err{display:block;font-size:.85rem;color:#B42318;margin-top:4px}
+.contact-group > .err:empty{display:none}
+.req{color:#B42318}
+.opt{font-weight:400;color:var(--muted)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-group{border:0;margin:0;padding:0;min-width:0}
+.contact-group legend{font-size:.88rem;font-weight:600;color:var(--ink);padding:0;margin-bottom:6px}
+.fields.inner{margin-top:0}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--ink);background:var(--tint);border-radius:var(--r-sm);padding:12px 14px;line-height:1.45}
+.consent label{display:flex;gap:10px;align-items:flex-start}
+.consent input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--blue)}
+.consent a{color:var(--blue)}
+.consent.sim{background:#FFF7E6}
+.err.full{grid-column:1/-1;font-size:.85rem;color:#B42318;margin-top:-8px;min-height:1em}
+form.wa .btn{margin-top:18px;width:100%;justify-content:center}
+form.wa .btn[disabled]{opacity:.7;cursor:progress}
+.send-err{font-size:.92rem;color:#B42318;margin-top:10px}
+.send-err:empty{display:none}
+.send-err a{color:#B42318;font-weight:600}
+.privacy{font-size:.82rem;color:var(--muted);margin-top:12px}
+.privacy a{color:var(--blue)}
+.ok-box{background:#fff;color:var(--text);border-radius:var(--r);padding:clamp(22px,3vw,32px)}
+.ok-box:focus{outline:none}
+.ok-box .badge{display:inline-flex;gap:8px;align-items:center;background:#E4F5D2;color:#24561A;font-weight:700;font-family:var(--f-head);font-size:.88rem;padding:6px 12px;border-radius:999px}
+.ok-box .badge svg{width:16px;height:16px}
+.ok-msg{margin-top:14px;font-size:1.05rem;color:var(--ink)}
+.ok-ref{margin-top:12px;font-size:.95rem}
+.ok-ref b{font-family:var(--f-head);color:var(--blue);letter-spacing:.04em;word-break:break-all}
+.btn-wa{background:#1E7A45;color:#fff;margin-top:18px}
+.btn-wa:hover{background:#17663A}
+.btn-wa svg{width:20px;height:20px}
+.wa-note{font-size:.85rem;color:var(--muted);margin-top:10px}
+.link-btn{background:none;border:0;padding:8px 0;margin-top:8px;font:inherit;font-size:.9rem;color:var(--blue);text-decoration:underline;cursor:pointer}
+.site-footer .legal a{color:inherit}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
 @media (max-width:520px){.fields{grid-template-columns:1fr}}
 
@@ -476,10 +511,10 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
         <li><a href="#tecnologia">Tecnología</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li class="nav-cta"><a href="#contacto">Agendar una reunión</a></li>
+        <li class="nav-cta"><a href="#contacto" data-servicio="consultoria" data-cta="reunion-menu">Agendar una reunión</a></li>
       </ul>
     </nav>
-    <a class="btn btn-navy header-cta" href="#contacto">Agendar una reunión</a>
+    <a class="btn btn-navy header-cta" href="#contacto" data-servicio="consultoria" data-cta="reunion-cabecera">Agendar una reunión</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
       <svg aria-hidden="true"><use href="#i-menu"/></svg>
     </button>
@@ -497,7 +532,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
       <div class="bar" aria-hidden="true"></div>
       <p class="hero-sub">Conectamos el campo, las operaciones, las finanzas y la tecnología para mejorar la productividad, controlar los costos y fortalecer la rentabilidad de su empresa.</p>
       <div class="hero-ctas">
-        <a class="btn btn-lime" href="https://wa.me/50660645661?text=Hola%2C%20quisiera%20solicitar%20un%20diagn%C3%B3stico%20de%20PRISMA%20Inteligente%20para%20mi%20operaci%C3%B3n." target="_blank" rel="noopener" data-cta="diagnostico-portada">Solicitar un diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lime" href="#contacto" data-servicio="diagnostico" data-cta="diagnostico-portada">Solicitar un diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-ghost" href="#simulador" data-cta="simulador-portada">Calcular su impacto</a>
       </div>
       <p class="first-step">Primer paso: un diagnóstico de 4 a 6 semanas, con sus propios datos.</p>
@@ -596,8 +631,8 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
           <p><strong>Supuestos:</strong> el volumen anual se mantiene constante y la mejora es una reducción proporcional del costo por unidad. No considera cambios de precio, inversiones ni plazos de implementación. La oportunidad real se determina en el diagnóstico, con sus datos.</p>
         </div>
         <div class="sim-share">
-          <label class="sim-consent"><input type="checkbox" id="s-incluir"> Incluir las cifras del simulador en el mensaje de WhatsApp</label>
-          <p id="s-share-help">El botón abre WhatsApp con un mensaje para Francisco Barboza, socio de PRISMA. Si marca la casilla, el mensaje incluirá su cultivo, volumen, costo y escenarios. Nada se comparte hasta que usted lo envíe desde WhatsApp, y este sitio no guarda lo que ingresa.</p>
+          <label class="sim-consent"><input type="checkbox" id="s-incluir"> Autorizo incluir las cifras del simulador en mi solicitud</label>
+          <p id="s-share-help">El botón lleva al formulario de contacto con el servicio «Validación de un escenario del simulador». Si marca la casilla, su solicitud incluirá el cultivo, el volumen, el costo y los escenarios. Sin esa autorización, las cifras no se envían ni se guardan.</p>
           <span class="err err-dark" id="e-share" aria-live="polite"></span>
         </div>
         <a class="btn btn-lime" id="o-cta" href="#simulador" aria-describedby="s-share-help" data-cta="diagnostico-simulador">Validar este escenario con un diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -707,7 +742,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Acuerdo de confidencialidad</b> y propiedad de sus datos</span></li>
         </ul>
         <p class="offer-note">Una oportunidad identificada no es un ahorro hasta que se mide en sus números. No prometemos ahorros garantizados.</p>
-        <a class="btn btn-lime" href="https://wa.me/50660645661?text=Hola%2C%20quisiera%20solicitar%20un%20diagn%C3%B3stico%20de%20PRISMA%20Inteligente%20para%20mi%20operaci%C3%B3n." target="_blank" rel="noopener" data-cta="diagnostico-oferta">Solicitar un diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lime" href="#contacto" data-servicio="diagnostico" data-cta="diagnostico-oferta">Solicitar un diagnóstico <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="modes reveal">
         <h3>Otras modalidades</h3>
@@ -852,7 +887,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
     </div>
 
     <div class="tech-cta reveal">
-      <a class="btn btn-lime" href="https://wa.me/50660645661?text=Hola%2C%20quisiera%20solicitar%20una%20demostraci%C3%B3n%20de%20PRISMA%20Budget%20Intelligence." target="_blank" rel="noopener" data-cta="demo-tecnologia">Solicitar una demostración <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-lime" href="#contacto" data-servicio="budget" data-cta="demo-tecnologia">Solicitar una demostración <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <p>Trabajamos con la información que su empresa ya genera, sin sustituir sus sistemas. Las conexiones con otros sistemas se definen en cada proyecto.</p>
     </div>
   </div>
@@ -968,22 +1003,63 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
       </ul>
     </div>
 
-    <form class="wa reveal" id="wa-form" novalidate>
-      <h3>Escríbanos en un minuto</h3>
-      <p class="hint">Al enviar, se abre WhatsApp con su mensaje listo. Este sitio no guarda sus datos.</p>
+    <div class="lead reveal" id="lead">
+    <form class="wa" id="lead-form" name="solicitud-comercial" method="POST" action="/" data-netlify="true" netlify-honeypot="sitio_web" novalidate>
+      <h3 id="lead-title">Solicite una conversación con PRISMA</h3>
+      <p class="hint">Le responderemos en un máximo de 2 días hábiles. Los campos con <span class="req" aria-hidden="true">*</span> son obligatorios.</p>
+      <input type="hidden" name="form-name" value="solicitud-comercial">
+      <input type="hidden" name="referencia" id="f-ref">
+      <input type="hidden" name="origen" id="f-origen" value="formulario-contacto">
+      <input type="hidden" name="version_aviso" value="AP-1.0">
+      <input type="hidden" name="fecha_consentimiento" id="f-fecha-cons">
+      <input type="hidden" name="consentimiento_cifras" id="f-cons-cifras" value="No">
+      <input type="hidden" name="cifras_simulador" id="f-cifras-txt">
+      <input type="hidden" name="subject" id="f-subject" value="Nueva solicitud PRISMA | %{submissionId}">
+      <p class="hp" aria-hidden="true"><label>No completar este campo <input name="sitio_web" tabindex="-1" autocomplete="off"></label></p>
       <div class="fields">
-        <div class="field full"><label for="f-motivo">Motivo</label>
-          <select id="f-motivo" name="motivo"><option value="diagnostico">Solicitar un diagnóstico</option><option value="demo">Solicitar una demostración</option><option value="otro">Otra consulta</option></select></div>
-        <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" maxlength="80" required aria-describedby="e-nombre"><span class="err" id="e-nombre" aria-live="polite"></span></div>
-        <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization" maxlength="100" required aria-describedby="e-empresa"><span class="err" id="e-empresa" aria-live="polite"></span></div>
-        <div class="field"><label for="f-pais">País</label>
-          <select id="f-pais" name="pais"><option>República Dominicana</option><option>Costa Rica</option><option>Otro país de Latinoamérica</option></select></div>
-        <div class="field"><label for="f-socio">Enviar a</label>
-          <select id="f-socio" name="socio"><option value="50660645661">Francisco Barboza</option><option value="50684215705">Meliza Alvarado</option></select></div>
-        <div class="field full"><label for="f-msg">¿Qué situación desea analizar?</label><textarea id="f-msg" name="mensaje" maxlength="1000" required aria-describedby="e-msg" placeholder="Por ejemplo: queremos conocer el costo por caja de cada finca."></textarea><span class="err" id="e-msg" aria-live="polite"></span></div>
+        <div class="field full"><label for="f-servicio">Servicio de interés <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-servicio" name="servicio" required aria-describedby="e-servicio">
+            <option value="">Seleccione un servicio</option>
+            <option value="Diagnóstico empresarial" data-key="diagnostico">Diagnóstico empresarial</option>
+            <option value="PRISMA Budget Intelligence" data-key="budget">PRISMA Budget Intelligence</option>
+            <option value="PRISMA Cost Intelligence" data-key="cost">PRISMA Cost Intelligence</option>
+            <option value="Consultoría agroindustrial" data-key="consultoria">Consultoría agroindustrial</option>
+            <option value="Validación de un escenario del simulador" data-key="simulador">Validación de un escenario del simulador</option>
+            <option value="Otros servicios" data-key="otros">Otros servicios</option>
+          </select><span class="err" id="e-servicio" aria-live="polite"></span></div>
+        <div class="field"><label for="f-nombre">Nombre y apellido <span class="req" aria-hidden="true">*</span></label><input id="f-nombre" name="nombre" autocomplete="name" maxlength="80" required aria-describedby="e-nombre"><span class="err" id="e-nombre" aria-live="polite"></span></div>
+        <div class="field"><label for="f-empresa">Empresa <span class="req" aria-hidden="true">*</span></label><input id="f-empresa" name="empresa" autocomplete="organization" maxlength="100" required aria-describedby="e-empresa"><span class="err" id="e-empresa" aria-live="polite"></span></div>
+        <div class="field"><label for="f-cargo">Cargo <span class="opt">(opcional)</span></label><input id="f-cargo" name="cargo" autocomplete="organization-title" maxlength="80"></div>
+        <div class="field"><label for="f-pais">País <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-pais" name="pais" required aria-describedby="e-pais"><option value="">Seleccione</option><option>República Dominicana</option><option>Costa Rica</option><option>Guatemala</option><option>Honduras</option><option>El Salvador</option><option>Nicaragua</option><option>Panamá</option><option>Colombia</option><option>Ecuador</option><option>Perú</option><option>México</option><option>Otro país</option></select><span class="err" id="e-pais" aria-live="polite"></span></div>
+        <fieldset class="field full contact-group" aria-describedby="e-contacto">
+          <legend>Medio de contacto <span class="req" aria-hidden="true">*</span> <span class="opt">(al menos uno)</span></legend>
+          <div class="fields inner">
+            <div class="field"><label for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" aria-describedby="e-email"><span class="err" id="e-email" aria-live="polite"></span></div>
+            <div class="field"><label for="f-tel">Teléfono con código de país</label><input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="22" placeholder="+código de país y número" aria-describedby="e-tel"><span class="err" id="e-tel" aria-live="polite"></span></div>
+          </div>
+          <span class="err" id="e-contacto" aria-live="polite"></span>
+        </fieldset>
+        <div class="field full"><label for="f-cultivo">Cultivo o actividad <span class="opt">(opcional)</span></label>
+          <select id="f-cultivo" name="cultivo"><option value="">Seleccione</option><option>Banano</option><option>Arroz</option><option>Piña</option><option>Cítricos</option><option>Caña de azúcar</option><option>Otros cultivos</option><option>Otras actividades agroindustriales</option></select></div>
+        <div class="field full"><label for="f-necesidad">¿Qué necesita resolver? <span class="opt">(opcional)</span></label><textarea id="f-necesidad" name="necesidad" maxlength="1000" placeholder="Por ejemplo: queremos consolidar el presupuesto de varias fincas."></textarea></div>
+        <label class="consent full" for="f-consent"><input type="checkbox" id="f-consent" name="consentimiento_datos" value="Sí" aria-describedby="e-consent"> <span>Autorizo a PRISMA Inteligente a tratar estos datos para atender esta solicitud y darle seguimiento comercial, según el <a href="privacidad.html" target="_blank" rel="noopener">aviso de privacidad</a> (versión AP-1.0). <span class="req" aria-hidden="true">*</span></span></label>
+        <span class="err full" id="e-consent" aria-live="polite"></span>
+        <div class="consent sim full" id="f-cifras-wrap" hidden><label for="f-cifras"><input type="checkbox" id="f-cifras"> <span><b>Opcional:</b> autorizo registrar y compartir con PRISMA las cifras que ingresé en el simulador (cultivo, volumen, costo y escenarios). Sin esta autorización, las cifras no se envían ni se guardan.</span></label></div>
       </div>
-      <button class="btn btn-navy" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar por WhatsApp</button>
+      <button class="btn btn-navy" type="submit" id="f-submit">Enviar solicitud</button>
+      <p class="err send-err" id="e-envio" role="alert"></p>
+      <p class="privacy">Sus datos se usan solo para atender esta solicitud. Puede pedir acceso, corrección o eliminación en cualquier momento. <a href="privacidad.html" target="_blank" rel="noopener">Aviso de privacidad</a>.</p>
     </form>
+    <div class="ok-box" id="lead-ok" role="status" tabindex="-1" hidden>
+      <span class="badge"><svg aria-hidden="true"><use href="#i-check"/></svg>Solicitud recibida</span>
+      <p class="ok-msg">Gracias por contactar a PRISMA Inteligente. Hemos recibido su solicitud. Nuestro equipo se pondrá en contacto con usted en un máximo de 2 días hábiles. Si lo desea, también puede continuar la conversación por WhatsApp.</p>
+      <p class="ok-ref">Referencia de su solicitud: <b id="ok-ref"></b></p>
+      <a class="btn btn-wa" id="ok-wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Continuar por WhatsApp</a>
+      <p class="wa-note">Se abrirá WhatsApp con un resumen de su solicitud para Meliza Alvarado. El mensaje solo se envía si usted lo envía desde WhatsApp.</p>
+      <button class="link-btn" type="button" id="ok-new">Enviar otra solicitud</button>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -1004,7 +1080,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
     </nav>
     <div class="legal">
       <span>Más perspectivas. Mejores decisiones.</span>
-      <span>© 2026 PRISMA Inteligente. Todos los derechos reservados.</span>
+      <span>© 2026 PRISMA Inteligente. Todos los derechos reservados. · <a href="privacidad.html">Aviso de privacidad</a></span>
     </div>
   </div>
 </footer>
@@ -1160,39 +1236,133 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
   $('sim-form').addEventListener('submit',function(e){e.preventDefault();calc();});
   $('s-ejemplo').addEventListener('click',function(){
     $('s-volumen').value='250000';$('s-costo').value='8,50';calc();$('s-volumen').focus();});
+  /* ---------- Bloque 5: formulario comercial ---------- */
+  var WA_MELIZA='50684215705';
+  var lead=$('lead-form'), okBox=$('lead-ok'), sending=false, ref=null;
+  function newRef(){
+    var d=new Date(), p=function(n){return String(n).padStart(2,'0');};
+    var abc='ABCDEFGHJKLMNPQRSTUVWXYZ23456789', r='', a=new Uint8Array(6);
+    (window.crypto||window.msCrypto).getRandomValues(a);
+    for(var i=0;i<6;i++)r+=abc.charAt(a[i]%abc.length);
+    return 'PRI-'+d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+'-'+r;
+  }
+  function selectServicio(key){
+    var sel=$('f-servicio');
+    for(var i=0;i<sel.options.length;i++){if(sel.options[i].getAttribute('data-key')===key){sel.selectedIndex=i;break;}}
+  }
+  function cifrasDisponibles(){calc();return !!simState;}
+  function syncCifrasUI(){
+    var show=$('f-servicio').selectedOptions[0]&&$('f-servicio').selectedOptions[0].getAttribute('data-key')==='simulador'&&cifrasDisponibles();
+    $('f-cifras-wrap').hidden=!show;
+    if(!show)$('f-cifras').checked=false;
+  }
+  /* Una sola autorización de cifras, reflejada en el simulador y en el formulario */
+  $('s-incluir').addEventListener('change',function(){$('f-cifras').checked=this.checked;setErr('e-share','');});
+  $('f-cifras').addEventListener('change',function(){$('s-incluir').checked=this.checked;});
+  $('f-servicio').addEventListener('change',syncCifrasUI);
+  function goToForm(key,origen){
+    if(okBox.hidden===false){/* ya hay una solicitud confirmada: no se pierde la confirmación */}
+    else{selectServicio(key);$('f-origen').value=origen;syncCifrasUI();}
+    var target=okBox.hidden?$('f-servicio'):okBox;
+    document.getElementById('contacto').scrollIntoView({behavior:'smooth',block:'start'});
+    setTimeout(function(){target.focus({preventScroll:true});},400);
+  }
+  document.querySelectorAll('a[data-servicio]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();goToForm(a.getAttribute('data-servicio'),a.getAttribute('data-cta')||'boton');});
+  });
   $('o-cta').addEventListener('click',function(e){
     e.preventDefault(); setErr('e-share','');
-    var text;
-    if($('s-incluir').checked){
-      calc();
-      if(!simState){setErr('e-share','Para incluir sus cifras, primero corrija o complete los datos del simulador.');$(simIssue||'s-volumen').focus();return;}
-      var st=simState,pl=SIM.plural[st.u],un=st.u==='kg'?'kilogramo':st.u;
-      var esc=st.pcts.map(function(p,k){return fmt(p,decs(p))+' % = '+moneyAuto(st.imps[k])+' al año';}).join('; ');
-      text='Hola, usé el simulador de PRISMA Inteligente.\nCultivo: '+st.cultivo+'\nVolumen anual: '+fmt(st.vol,0)+' '+pl+'\nCosto actual: '+moneyAuto(st.cost)+' por '+un+
-        '\nEscenarios hipotéticos (volumen constante, reducción proporcional del costo unitario): '+esc+'\nMe gustaría validar estos supuestos con un diagnóstico.';
-    } else {
-      text='Hola, usé el simulador de PRISMA Inteligente y me gustaría validar un escenario con un diagnóstico.';
-    }
-    window.open('https://wa.me/50660645661?text='+encodeURIComponent(text),'_blank','noopener');
+    if($('s-incluir').checked&&!cifrasDisponibles()){
+      setErr('e-share','Para incluir sus cifras, primero corrija o complete los datos del simulador.');$(simIssue||'s-volumen').focus();return;}
+    $('f-cifras').checked=$('s-incluir').checked;
+    goToForm('simulador','diagnostico-simulador');
   });
-
-  var form=document.getElementById('wa-form');
-  form.addEventListener('submit',function(e){
+  function cifrasTexto(){
+    var st=simState,pl=SIM.plural[st.u],un=st.u==='kg'?'kilogramo':st.u;
+    var esc=st.pcts.map(function(p,k){return fmt(p,decs(p))+' % = '+moneyAuto(st.imps[k])+' al año';}).join('; ');
+    return 'Cultivo: '+st.cultivo+'\nVolumen anual: '+fmt(st.vol,0)+' '+pl+'\nCosto actual: '+moneyAuto(st.cost)+' por '+un+
+      '\nEscenarios hipotéticos (volumen constante, reducción proporcional del costo unitario): '+esc;
+  }
+  /* Limpieza: espacios, caracteres de control y arranques que una hoja de cálculo interpretaría como fórmula */
+  function clean(v,formula){
+    v=String(v||'').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').replace(/[ \t]+/g,' ').trim();
+    if(formula)v=v.replace(/^[=+\-@\s]+/,'');
+    return v;
+  }
+  function fieldErr(id,eid,msg){var el=$(id);setErr(eid,msg);if(el)el.setAttribute('aria-invalid',msg?'true':'false');return msg?el:null;}
+  function validate(){
+    var first=null,f=function(x){if(x&&!first)first=x;};
+    var nombre=clean($('f-nombre').value,true), empresa=clean($('f-empresa').value,true);
+    var email=clean($('f-email').value), tel=clean($('f-tel').value);
+    f(fieldErr('f-servicio','e-servicio',$('f-servicio').value?'':'Seleccione el servicio de su interés.'));
+    f(fieldErr('f-nombre','e-nombre',!nombre?'Escriba su nombre y apellido.':(nombre.length<3||nombre.split(' ').length<2)?'Escriba su nombre y al menos un apellido.':''));
+    f(fieldErr('f-empresa','e-empresa',empresa.length<2?'Escriba el nombre de su empresa.':''));
+    f(fieldErr('f-pais','e-pais',$('f-pais').value?'':'Seleccione su país.'));
+    var emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)&&email.length<=120;
+    var digits=tel.replace(/\D/g,'');
+    var telOk=/^\+[\d\s\-().]+$/.test(tel)&&digits.length>=8&&digits.length<=15;
+    f(fieldErr('f-email','e-email',email&&!emailOk?'Revise el correo; por ejemplo: nombre@empresa.com.':''));
+    f(fieldErr('f-tel','e-tel',tel&&!telOk?'Escriba el teléfono con «+» y el código de país, seguido del número.':''));
+    var noContact=!(email&&emailOk)&&!(tel&&telOk)&&!email&&!tel;
+    setErr('e-contacto',noContact?'Indique al menos un medio de contacto: correo o teléfono.':'');
+    if(noContact)f($('f-email'));
+    f(fieldErr('f-consent','e-consent',$('f-consent').checked?'':'Para registrar su solicitud necesitamos su autorización.'));
+    return first;
+  }
+  function waMessage(d){
+    var L=['Hola, equipo de PRISMA Inteligente.','','He registrado una solicitud comercial desde su página web.','','Referencia: '+d.referencia,''];
+    L.push('Nombre: '+d.nombre);L.push('Empresa: '+d.empresa);
+    if(d.cargo)L.push('Cargo: '+d.cargo);
+    L.push('País: '+d.pais);
+    if(d.telefono)L.push('Teléfono: '+d.telefono);
+    if(d.email)L.push('Correo: '+d.email);
+    if(d.cultivo)L.push('Cultivo: '+d.cultivo);
+    L.push('','Servicio de interés: '+d.servicio);
+    if(d.necesidad)L.push('','Necesidad empresarial: '+d.necesidad);
+    if(d.cifras)L.push('','Cifras del simulador (autorizo compartirlas):',d.cifras);
+    L.push('','Me gustaría coordinar una conversación para conocer sus soluciones.');
+    return L.join('\n');
+  }
+  lead.addEventListener('submit',function(e){
     e.preventDefault();
-    var req=[['f-nombre','e-nombre','Escriba su nombre.'],['f-empresa','e-empresa','Escriba el nombre de su empresa.'],['f-msg','e-msg','Cuéntenos brevemente qué desea analizar.']];
-    var first=null;
-    req.forEach(function(r){
-      var el=document.getElementById(r[0]), er=document.getElementById(r[1]);
-      var bad=!el.value.trim();
-      er.textContent=bad?r[2]:'';
-      el.setAttribute('aria-invalid',bad?'true':'false');
-      if(bad&&!first)first=el;
-    });
-    if(first){first.focus();return;}
-    var v=function(id){return document.getElementById(id).value.trim();};
-    var motivos={diagnostico:'Me gustaría solicitar un diagnóstico.',demo:'Me gustaría ver una demostración de las herramientas PRISMA.',otro:'Me gustaría conversar con PRISMA Inteligente.'};
-    var text='Hola, soy '+v('f-nombre')+' de '+v('f-empresa')+' ('+v('f-pais')+'). '+motivos[v('f-motivo')]+'\n\n'+v('f-msg');
-    window.open('https://wa.me/'+v('f-socio')+'?text='+encodeURIComponent(text),'_blank','noopener');
+    if(sending)return;                                   /* evita el doble clic */
+    setErr('e-envio','');
+    var bad=validate(); if(bad){bad.focus();return;}
+    if(!ref)ref=newRef();                                /* misma referencia en todos los reintentos */
+    var d={referencia:ref,servicio:$('f-servicio').value,nombre:clean($('f-nombre').value,true),empresa:clean($('f-empresa').value,true),
+      cargo:clean($('f-cargo').value,true),pais:$('f-pais').value,email:clean($('f-email').value),telefono:clean($('f-tel').value),
+      cultivo:$('f-cultivo').value,necesidad:clean($('f-necesidad').value,true).slice(0,1000),cifras:''};
+    var autorizaCifras=$('f-cifras').checked&&!$('f-cifras-wrap').hidden&&cifrasDisponibles();
+    if(autorizaCifras)d.cifras=cifrasTexto();
+    $('f-ref').value=ref;
+    $('f-fecha-cons').value=new Date().toISOString();
+    $('f-cons-cifras').value=autorizaCifras?'Sí':'No';
+    $('f-cifras-txt').value=d.cifras;
+    $('f-subject').value=('Nueva solicitud PRISMA | '+d.empresa+' | '+d.servicio+' | '+ref).slice(0,200);
+    var body=new URLSearchParams(new FormData(lead));
+    ['nombre','empresa','cargo','email','telefono','necesidad'].forEach(function(k){body.set(k,d[k]);});
+    if(!autorizaCifras)body.delete('cifras_simulador');  /* sin autorización, las cifras no viajan */
+    sending=true;var btn=$('f-submit');btn.disabled=true;btn.textContent='Enviando…';
+    var ctrl=window.AbortController?new AbortController():null, timer=setTimeout(function(){if(ctrl)ctrl.abort();},15000);
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString(),signal:ctrl?ctrl.signal:undefined})
+      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);
+        clearTimeout(timer);
+        $('ok-ref').textContent=ref;
+        $('ok-wa').href='https://wa.me/'+WA_MELIZA+'?text='+encodeURIComponent(waMessage(d));
+        lead.hidden=true;okBox.hidden=false;okBox.focus();
+      })
+      .catch(function(){
+        clearTimeout(timer);
+        var msg='No pudimos confirmar el registro de su solicitud. Sus datos siguen en el formulario: inténtelo de nuevo en unos minutos. ';
+        $('e-envio').textContent=msg;
+        var a=document.createElement('a');a.href='https://wa.me/'+WA_MELIZA+'?text='+encodeURIComponent(waMessage(d));a.target='_blank';a.rel='noopener';
+        a.textContent='También puede escribirnos por WhatsApp.';$('e-envio').appendChild(a);
+      })
+      .then(function(){sending=false;btn.disabled=false;btn.textContent='Enviar solicitud';});
+  });
+  $('ok-new').addEventListener('click',function(){
+    lead.reset();ref=null;$('f-cifras').checked=false;$('s-incluir').checked=false;$('f-cifras-wrap').hidden=true;$('f-origen').value='formulario-contacto';
+    okBox.hidden=true;lead.hidden=false;$('f-servicio').focus();
   });
 })();
 </script>

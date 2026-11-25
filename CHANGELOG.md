@@ -1,5 +1,16 @@
 # PRISMA Inteligente · CHANGELOG
 
+## v2.5 — Bloque 5: sistema de captación comercial (2026-11-25, pendiente de aprobación)
+
+- Formulario comercial único (Netlify Forms, `solicitud-comercial`) en lugar de «Escríbanos en un minuto». Servicio preseleccionado según el botón: diagnóstico (portada y oferta), demostración, simulador y «Agendar una reunión».
+- Campos obligatorios: servicio, nombre y apellido, empresa, país, correo o teléfono internacional y autorización. Opcionales: cargo, cultivo o actividad, necesidad.
+- Registro con referencia única estable en los reintentos (PRI-AAAAMMDD-XXXXXX), origen, evidencia de consentimiento, versión del aviso (AP-1.0) y autorización de cifras.
+- La confirmación aparece solo si Netlify responde con éxito. WhatsApp con Meliza es opcional y se ofrece después del registro, con un mensaje estructurado.
+- Autorización de cifras del simulador independiente y coherente entre simulador, formulario, registro y WhatsApp. Sin ella, las cifras no se envían.
+- Nueva página `privacidad.html` (aviso AP-1.0). Datos del responsable pendientes de confirmación: no publicar hasta completarlos.
+- Antispam: honeypot y Akismet de Netlify, sin reCAPTCHA. Sin analítica ni dependencias nuevas.
+- Botón flotante y WhatsApp de cada socio sin cambios.
+
 ## v2.4 — Bloque 4: optimización del rendimiento (2026-11-25, pendiente de aprobación)
 
 - Imágenes y fuentes extraídas del HTML (antes en Base64) a `assets/`, con huella de contenido en el nombre y caché de un año (`immutable`) en `netlify.toml`. El HTML pasa de 796 KB a 87 KB.
