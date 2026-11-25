@@ -1,5 +1,13 @@
 # PRISMA Inteligente · CHANGELOG
 
+## v2.4 — Bloque 4: optimización del rendimiento (2026-11-25, pendiente de aprobación)
+
+- Imágenes y fuentes extraídas del HTML (antes en Base64) a `assets/`, con huella de contenido en el nombre y caché de un año (`immutable`) en `netlify.toml`. El HTML pasa de 796 KB a 87 KB.
+- La versión de mayor tamaño de cada fotografía es el mismo archivo aprobado, copiado byte a byte. Se añadieron versiones reducidas (solo escaladas, sin recorte) con `srcset`/`sizes` para portada en celular, franja, casos y logos.
+- Precarga de la imagen de portada según el tamaño de pantalla (`fetchpriority="high"`); `decoding="async"` en imágenes fuera de la primera pantalla.
+- Capturas de Budget Intelligence (`img/`): caché de un día.
+- Sin cambios en textos, CSS, simulador, formularios, WhatsApp, etiqueta de Google Search Console, canonical, robots.txt, sitemap ni redirecciones.
+
 ## v2.3 — Bloque 3: exhibición tecnológica (2026-11-25, pendiente de aprobación)
 
 - Sección Tecnología: vitrina de **PRISMA Budget Intelligence** con 5 capturas reales de la aplicación (v0.5.1-beta) tomadas con datos ficticios de demostración (empresa «Agrícola Demo S.A.», fincas DEMO-N/S/E/O). Pestañas accesibles: Consolidado, Por finca, Por actividad, Actividad × finca, Escenarios.
