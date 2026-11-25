@@ -368,6 +368,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
 .sim-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.14)}
 .sim-base span{color:var(--on-dark-muted);font-size:.95rem}
 .sim-base b{font-family:var(--f-head);color:#fff;font-size:1.15rem}
+.sim-round{margin-top:10px;font-size:.85rem;color:var(--on-dark-muted)}
 .sim-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
 .sim-card{background:var(--navy-2);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-sm);padding:16px 14px}
 .sim-card:nth-child(2){border-color:var(--lime)}
@@ -545,6 +546,7 @@ form.wa .btn{margin-top:18px;width:100%;justify-content:center}
       </form>
       <div class="sim-out reveal" aria-live="polite">
         <div class="sim-base"><span>Costo anual actual estimado</span><b id="o-base">—</b></div>
+        <p class="sim-round">Montos estimados y redondeados para presentación.</p>
         <p class="sim-empty" id="o-empty">Complete el volumen y el costo para ver los escenarios.</p>
         <div class="sim-cards" id="o-cards" hidden>
           <div class="sim-card"><h3>Conservador</h3><p class="pct" id="o-p1"></p><b class="big" id="o-a1"></b><span class="per" id="o-u1"></span></div>
