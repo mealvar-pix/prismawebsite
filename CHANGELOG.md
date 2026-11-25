@@ -6,7 +6,8 @@
 - Problema que resuelve, beneficios por público, lista «Funciona hoy» / «En desarrollo» y nota de carga por Excel y CSV (sin integraciones ERP).
 - **PRISMA Cost Intelligence** pasa a «En desarrollo y validación», con sus capacidades de análisis y sin capturas (el prototipo usa datos reales).
 - Tarjeta Budget: «control» → «aprobación» (el control presupuestario aún no está implementado).
-- Imágenes WebP en `img/` (760 y 1400 px, carga diferida). Sin cambios en las demás secciones, la etiqueta de Google Search Console ni el canonical.
+- Frase de la tarjeta Budget: «Validado con datos presupuestarios reales de operaciones agroindustriales, mediante pruebas de conciliación con los archivos de origen».
+- Imágenes WebP en `img/` (760 px y tamaño completo: 1400 o 1130 px según la captura; el nombre indica el ancho real), `sizes` ajustado al ancho mostrado, carga diferida. Sin cambios en las demás secciones, la etiqueta de Google Search Console ni el canonical.
 
 ## v2.0 — Activos, flota y tecnología operacional (2026-09-27)
 
