@@ -1,5 +1,12 @@
 # PRISMA Inteligente · CHANGELOG
 
+## v2.6 — Actualización comercial (2026-11-26, pendiente de aprobación; depende del PR #8)
+
+- «Nuestras soluciones»: tres servicios nuevos (Automatización de procesos administrativos; Planificación financiera y solicitudes de crédito, con aclaración de que PRISMA no es intermediario financiero ni garantiza la aprobación; Auditorías agronómicas de campo), con íconos propios y el mismo estilo. Los cuatro existentes se conservan.
+- Formulario: 9 servicios. Cultivos: se agregan Plátano (separado de Banano), Palma y Tubérculos; Arroz ya estaba. El simulador suma los mismos tres cultivos, con una unidad sugerida y editable.
+- Terminología: «período» pasa a «mensual» o «mes» en los textos de Budget y Cost Intelligence. Las capturas reales no se modifican.
+- Cobertura: «Costa Rica y Latinoamérica» en el título, la descripción, las palabras clave, los datos estructurados (areaServed), la portada, la presencia regional y la imagen para redes.
+
 ## v2.5 — Bloque 5: sistema de captación comercial (2026-11-25, pendiente de aprobación)
 
 - Formulario comercial único (Netlify Forms, `solicitud-comercial`) en lugar de «Escríbanos en un minuto». Servicio preseleccionado según el botón: diagnóstico (portada y oferta), demostración, simulador y «Agendar una reunión».

@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PRISMA Inteligente | Consultoría agroindustrial en República Dominicana y Costa Rica</title>
-<meta name="description" content="Consultoría y tecnología agroindustrial para banano, arroz, piña y cítricos. Conectamos el campo, las operaciones y las finanzas para mejorar la productividad, controlar los costos y fortalecer la rentabilidad. República Dominicana, Costa Rica y Latinoamérica.">
+<title>PRISMA Inteligente | Consultoría agroindustrial en Costa Rica y Latinoamérica</title>
+<meta name="description" content="Consultoría y tecnología agroindustrial para banano, arroz, piña y cítricos. Conectamos el campo, las operaciones y las finanzas para mejorar la productividad, controlar los costos y fortalecer la rentabilidad. Costa Rica y Latinoamérica.">
 <meta name="theme-color" content="#0A2240">
 <!-- Verificación de Google Search Console: NO ELIMINAR en futuras versiones -->
 <meta name="google-site-verification" content="ICjwOiA93C5Jf4vbjh8DH8RtRimONuI6LFmUeSIjv4c" />
-<meta name="keywords" content="consultoría agroindustrial, consultoría agrícola República Dominicana, costos agrícolas, productividad agrícola, presupuestos agrícolas, control de gestión agroindustrial, software de gestión agroindustrial, inteligencia de negocios para agricultura, rentabilidad agrícola, transformación digital agroindustrial">
+<meta name="keywords" content="consultoría agroindustrial, consultoría agrícola Costa Rica, consultoría agrícola Latinoamérica, costos agrícolas, productividad agrícola, presupuestos agrícolas, control de gestión agroindustrial, software de gestión agroindustrial, inteligencia de negocios para agricultura, rentabilidad agrícola, transformación digital agroindustrial">
 <link rel="canonical" href="https://prismainteligente.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_LA">
@@ -33,8 +33,8 @@
   "name": "PRISMA Inteligente",
   "description": "Consultoría y tecnología agroindustrial: productividad, costos, presupuestos, control de gestión y rentabilidad.",
   "url": "https://prismainteligente.com/",
-  "areaServed": ["República Dominicana", "Costa Rica", "Latinoamérica"],
-  "knowsAbout": ["Consultoría agroindustrial", "Costos agrícolas", "Presupuestos agrícolas", "Productividad agrícola", "Control de gestión agroindustrial", "Inteligencia de negocios para agricultura"],
+  "areaServed": ["Costa Rica", "Latinoamérica"],
+  "knowsAbout": ["Consultoría agroindustrial", "Costos agrícolas", "Presupuestos agrícolas", "Productividad agrícola", "Control de gestión agroindustrial", "Inteligencia de negocios para agricultura", "Automatización de procesos administrativos", "Planificación financiera y solicitudes de crédito", "Auditorías agronómicas de campo"],
   "founder": [
     {"@type": "Person", "name": "Meliza Alvarado Ugalde"},
     {"@type": "Person", "name": "Francisco Barboza Cardenas"}
@@ -172,17 +172,18 @@ a{color:var(--blue)}
 /* 3. Soluciones */
 .areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .area{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column}
-.area:nth-child(2){border-top-color:var(--teal)}
-.area:nth-child(3){border-top-color:var(--green)}
-.area:nth-child(4){border-top-color:var(--navy)}
+.area:nth-child(4n+2){border-top-color:var(--teal)}
+.area:nth-child(4n+3){border-top-color:var(--green)}
+.area:nth-child(4n){border-top-color:var(--navy)}
 .area .ic{width:40px;height:40px;color:var(--blue);margin-bottom:16px}
-.area:nth-child(2) .ic{color:var(--teal)}
-.area:nth-child(3) .ic{color:var(--green)}
-.area:nth-child(4) .ic{color:var(--navy)}
+.area:nth-child(4n+2) .ic{color:var(--teal)}
+.area:nth-child(4n+3) .ic{color:var(--green)}
+.area:nth-child(4n) .ic{color:var(--navy)}
 .area p{margin-top:10px;font-size:.98rem}
 .area ul{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:8px}
 .area li{display:flex;gap:10px;font-size:.93rem;color:var(--ink);font-weight:500}
 .area li svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--green)}
+.area .area-note{margin-top:14px;font-size:.84rem;color:var(--muted)}
 .assure{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;margin-top:36px;font-weight:600;color:var(--ink)}
 .assure li{display:flex;align-items:center;gap:10px}
 .assure svg{width:22px;height:22px;color:var(--green)}
@@ -496,6 +497,9 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
   <symbol id="i-prod" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 33h28"/><path d="M10 33V22M18 33V16M26 33V19M34 33V10"/><path d="M8 16l9-7 8 5 9-8"/></g></symbol>
   <symbol id="i-cost" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><ellipse cx="20" cy="10" rx="12" ry="4.5"/><path d="M8 10v7c0 2.5 5.4 4.5 12 4.5S32 19.5 32 17v-7"/><path d="M8 17v7c0 2.5 5.4 4.5 12 4.5S32 26.5 32 24v-7"/><path d="M8 24v6c0 2.5 5.4 4.5 12 4.5S32 32.5 32 30v-6"/></g></symbol>
   <symbol id="i-plan" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="7"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/><path d="M29 11l5-5M30 6h4v4"/></g></symbol>
+  <symbol id="i-auto" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M31 15a12 12 0 0 0-20.5-4"/><path d="M10 5v6h6"/><path d="M9 25a12 12 0 0 0 20.5 4"/><path d="M30 35v-6h-6"/><circle cx="20" cy="20" r="4"/></g></symbol>
+  <symbol id="i-fin" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="22" height="30" rx="2.5"/><path d="M12 12h12M12 17h7"/><path d="M12 29l5-4.5 4 2.5 6-6"/><path d="M29 15h4v20H13"/></g></symbol>
+  <symbol id="i-field" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="11"/><path d="M25 25l9 9"/><path d="M11.5 21c0-5.5 4-9 10-9.5-.4 6-4 9.8-10 9.5z"/><path d="M11.5 21l5.5-4.5"/></g></symbol>
   <symbol id="i-tech" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="30" height="20" rx="2.5"/><path d="M14 33h12M20 27v6"/><path d="M11 21l5-5 4 3 7-7"/></g></symbol>
 </svg>
 
@@ -537,7 +541,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       </div>
       <p class="first-step">Primer paso: un diagnóstico de 4 a 6 semanas, con sus propios datos.</p>
       <p class="axis"><span>CAMPO</span><span>DATOS</span><span>ESTRATEGIA</span><span>RESULTADOS</span></p>
-      <p class="region">Banano · Arroz · Piña · Cítricos — consultoría agrícola en República Dominicana, Costa Rica y Latinoamérica</p>
+      <p class="region">Banano · Arroz · Piña · Cítricos — consultoría agrícola en Costa Rica y Latinoamérica</p>
     </div>
     <div class="hero-photo">
       <picture><source media="(max-width:860px)" srcset="assets/portada-ancha-480.0790c49b9a.webp 480w, assets/portada-ancha-780.a079c60a94.webp 780w, assets/portada-ancha.4e7bde5c02.webp 1000w" sizes="100vw" width="1000" height="550"><img src="assets/portada.a93b07b147.webp" alt="Vista aérea de tres tractores con equipos de aplicación entrando a las hileras de una plantación" width="620" height="1158" fetchpriority="high"></picture>
@@ -595,7 +599,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       <form class="sim-form reveal" id="sim-form" novalidate>
         <div class="fields">
           <div class="field"><label for="s-cultivo">Cultivo</label>
-            <select id="s-cultivo"><option value="banano">Banano</option><option value="arroz">Arroz</option><option value="pina">Piña</option><option value="citricos">Cítricos</option><option value="otro">Otro</option></select></div>
+            <select id="s-cultivo"><option value="banano">Banano</option><option value="platano">Plátano</option><option value="arroz">Arroz</option><option value="pina">Piña</option><option value="citricos">Cítricos</option><option value="palma">Palma</option><option value="tuberculos">Tubérculos</option><option value="otro">Otro</option></select></div>
           <div class="field"><label for="s-unidad">Unidad de producción</label>
             <select id="s-unidad"><option value="caja">Caja</option><option value="quintal">Quintal</option><option value="tonelada">Tonelada</option><option value="kg">Kilogramo</option><option value="unidad">Unidad</option></select></div>
           <div class="field"><label for="s-volumen">Volumen anual</label>
@@ -647,7 +651,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
     <div class="head reveal">
       <p class="kicker">Nuestras soluciones</p>
       <h2 id="soluciones-title">Una visión integral <span class="accent">de su negocio.</span></h2>
-      <p>Cuatro áreas con una misma lógica: conectar lo que pasa en el campo con lo que muestran los números.</p>
+      <p>Siete áreas con una misma lógica: conectar lo que pasa en el campo con lo que muestran los números.</p>
     </div>
     <div class="areas">
       <article class="area reveal">
@@ -688,6 +692,37 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Menos trabajo manual</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Datos validados y conciliados</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Herramientas a la medida del campo</li>
+        </ul>
+      </article>
+      <article class="area reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-auto"/></svg>
+        <h3>Automatización de procesos administrativos</h3>
+        <p>Digitalizamos y automatizamos tareas administrativas para reducir el trabajo manual y los errores, ganar tiempo y mejorar la trazabilidad de la información.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Reportes e indicadores automáticos</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Flujos de trabajo más ágiles</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Oportunidades de automatización con IA</li>
+        </ul>
+      </article>
+      <article class="area reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-fin"/></svg>
+        <h3>Planificación financiera y solicitudes de crédito</h3>
+        <p>Preparamos flujos de caja proyectados, presupuestos financieros y análisis de capacidad de pago para presentar solicitudes de financiamiento ante la banca.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Flujos de caja y proyecciones</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Capacidad de pago y escenarios</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Información que pide el banco</li>
+        </ul>
+        <p class="area-note">No somos intermediarios financieros ni garantizamos la aprobación: la decisión es de cada entidad.</p>
+      </article>
+      <article class="area reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-field"/></svg>
+        <h3>Auditorías agronómicas de campo</h3>
+        <p>Ingenieros agrónomos evalúan en campo la ejecución de las labores, el manejo agronómico y el aprovechamiento de los recursos.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Calidad de las labores verificada</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Uso eficiente de los recursos</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Informe técnico con recomendaciones</li>
         </ul>
       </article>
     </div>
@@ -786,7 +821,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
         <p>Prototipo para analizar el costo real de producción y encontrar dónde se desvía:</p>
         <ul class="ci-list">
           <li>Costo por unidad producida</li>
-          <li>Costos por finca y por período</li>
+          <li>Costo mensual por finca</li>
           <li>Mano de obra, materiales y servicios</li>
           <li>Comparación de costos entre operaciones</li>
           <li>Identificación de desviaciones</li>
@@ -804,7 +839,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       <div class="sc-head">
         <p class="sc-kicker">PRISMA Budget Intelligence · por dentro</p>
         <h3 id="sc-title">Así funciona hoy la aplicación</h3>
-        <p><b>El problema que resuelve:</b> el presupuesto agrícola suele repartirse en varios Excel por finca, difíciles de consolidar, comparar y aprobar. Budget Intelligence reúne todas las partidas en un solo modelo, y cada cifra se puede rastrear hasta la finca, la labor y el período.</p>
+        <p><b>El problema que resuelve:</b> el presupuesto agrícola suele repartirse en varios Excel por finca, difíciles de consolidar, comparar y aprobar. Budget Intelligence reúne todas las partidas en un solo modelo, y cada cifra se puede rastrear hasta la finca, la labor y el mes.</p>
       </div>
       <div class="sc-tabs" role="tablist" aria-label="Vistas de PRISMA Budget Intelligence">
         <button type="button" role="tab" id="bt-consolidado" aria-controls="bp-consolidado" aria-selected="true">Consolidado</button>
@@ -816,7 +851,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       <div class="sc-panel" role="tabpanel" id="bp-consolidado" aria-labelledby="bt-consolidado" tabindex="0">
         <figure>
           <div class="sc-frame"><img src="img/bi-consolidado-1400.webp" srcset="img/bi-consolidado-760.webp 760w, img/bi-consolidado-1400.webp 1400w" sizes="(max-width:600px) calc(100vw - 94px), (max-width:1279px) calc(100vw - 140px), 1020px" width="1400" height="748" loading="lazy" decoding="async" alt="Captura de PRISMA Budget Intelligence: presupuesto consolidado e indicadores, con datos ficticios de demostración."></div>
-          <figcaption><b>Presupuesto consolidado e indicadores.</b> Total del año, su composición por clase de costo, el costo por caja y por hectárea, y la distribución por período. Cada indicador muestra su denominador.</figcaption>
+          <figcaption><b>Presupuesto consolidado e indicadores.</b> Total del año, su composición por clase de costo, el costo por caja y por hectárea, y la distribución mensual. Cada indicador muestra su denominador.</figcaption>
           <a class="sc-zoom" href="img/bi-consolidado-1400.webp" target="_blank" rel="noopener">Ampliar captura<span class="sr"> (se abre en una pestaña nueva)</span></a>
         </figure>
       </div>
@@ -837,7 +872,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       <div class="sc-panel" role="tabpanel" id="bp-matriz" aria-labelledby="bt-matriz" tabindex="0" hidden>
         <figure>
           <div class="sc-frame"><img src="img/bi-matriz-1400.webp" srcset="img/bi-matriz-760.webp 760w, img/bi-matriz-1400.webp 1400w" sizes="(max-width:600px) calc(100vw - 94px), (max-width:1279px) calc(100vw - 140px), 1020px" width="1400" height="698" loading="lazy" decoding="async" alt="Captura de PRISMA Budget Intelligence: matriz presupuestaria, con datos ficticios de demostración."></div>
-          <figcaption><b>Matriz presupuestaria.</b> Cada actividad en cada finca, en una sola tabla. Filas y columnas se eligen: finca, lote, actividad, clase de costo o período.</figcaption>
+          <figcaption><b>Matriz presupuestaria.</b> Cada actividad en cada finca, en una sola tabla. Filas y columnas se eligen: finca, lote, actividad, clase de costo o mes.</figcaption>
           <a class="sc-zoom" href="img/bi-matriz-1400.webp" target="_blank" rel="noopener">Ampliar captura<span class="sr"> (se abre en una pestaña nueva)</span></a>
         </figure>
       </div>
@@ -859,9 +894,9 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
       <div class="sc-status">
         <div class="ok"><h4><span class="status s-pilot">Funciona hoy</span></h4>
           <ul>
-            <li>Presupuesto consolidado y por finca, lote, labor y período</li>
+            <li>Presupuesto mensual, consolidado y por finca, lote y labor</li>
             <li>Costo por caja y por hectárea, con su denominador</li>
-            <li>Matriz por actividad, finca, clase de costo y período</li>
+            <li>Matriz por actividad, finca, clase de costo y mes</li>
             <li>Escenarios del año siguiente desde una versión base</li>
             <li>Comparación entre versiones y entre fincas</li>
             <li>Revisión, aprobación y bitácora de cambios</li>
@@ -999,7 +1034,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
         </div>
       </div>
       <ul class="regions" aria-label="Presencia regional">
-        <li>República Dominicana</li><li>Costa Rica</li><li>Latinoamérica</li>
+        <li>Costa Rica</li><li>Latinoamérica</li>
       </ul>
     </div>
 
@@ -1024,6 +1059,9 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
             <option value="PRISMA Budget Intelligence" data-key="budget">PRISMA Budget Intelligence</option>
             <option value="PRISMA Cost Intelligence" data-key="cost">PRISMA Cost Intelligence</option>
             <option value="Consultoría agroindustrial" data-key="consultoria">Consultoría agroindustrial</option>
+            <option value="Automatización de procesos administrativos" data-key="automatizacion">Automatización de procesos administrativos</option>
+            <option value="Planificación financiera y solicitudes de crédito" data-key="financiera">Planificación financiera y solicitudes de crédito</option>
+            <option value="Auditorías agronómicas de campo" data-key="auditoria">Auditorías agronómicas de campo</option>
             <option value="Validación de un escenario del simulador" data-key="simulador">Validación de un escenario del simulador</option>
             <option value="Otros servicios" data-key="otros">Otros servicios</option>
           </select><span class="err" id="e-servicio" aria-live="polite"></span></div>
@@ -1041,7 +1079,7 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
           <span class="err" id="e-contacto" aria-live="polite"></span>
         </fieldset>
         <div class="field full"><label for="f-cultivo">Cultivo o actividad <span class="opt">(opcional)</span></label>
-          <select id="f-cultivo" name="cultivo"><option value="">Seleccione</option><option>Banano</option><option>Arroz</option><option>Piña</option><option>Cítricos</option><option>Caña de azúcar</option><option>Otros cultivos</option><option>Otras actividades agroindustriales</option></select></div>
+          <select id="f-cultivo" name="cultivo"><option value="">Seleccione</option><option>Banano</option><option>Plátano</option><option>Arroz</option><option>Piña</option><option>Cítricos</option><option>Caña de azúcar</option><option>Palma</option><option>Tubérculos</option><option>Otros cultivos</option><option>Otras actividades agroindustriales</option></select></div>
         <div class="field full"><label for="f-necesidad">¿Qué necesita resolver? <span class="opt">(opcional)</span></label><textarea id="f-necesidad" name="necesidad" maxlength="1000" placeholder="Por ejemplo: queremos consolidar el presupuesto de varias fincas."></textarea></div>
         <label class="consent full" for="f-consent"><input type="checkbox" id="f-consent" name="consentimiento_datos" value="Sí" aria-describedby="e-consent"> <span>Autorizo a PRISMA Inteligente a tratar estos datos para atender esta solicitud y darle seguimiento comercial, según el <a href="privacidad.html" target="_blank" rel="noopener">aviso de privacidad</a> (versión AP-1.0). <span class="req" aria-hidden="true">*</span></span></label>
         <span class="err full" id="e-consent" aria-live="polite"></span>
@@ -1146,9 +1184,9 @@ form.wa .btn[disabled]{opacity:.7;cursor:progress}
   }
 
   // Simulador de impacto (sin almacenamiento)
-  var SIM={unidad:{banano:'caja',arroz:'quintal',pina:'caja',citricos:'tonelada',otro:'unidad'},
+  var SIM={unidad:{banano:'caja',platano:'caja',arroz:'quintal',pina:'caja',citricos:'tonelada',palma:'tonelada',tuberculos:'tonelada',otro:'unidad'},
     plural:{caja:'cajas',quintal:'quintales',tonelada:'toneladas',kg:'kilogramos',unidad:'unidades'},
-    nombre:{banano:'Banano',arroz:'Arroz',pina:'Piña',citricos:'Cítricos',otro:'Otro cultivo'},
+    nombre:{banano:'Banano',platano:'Plátano',arroz:'Arroz',pina:'Piña',citricos:'Cítricos',palma:'Palma',tuberculos:'Tubérculos',otro:'Otro cultivo'},
     pref:{USD:'USD ',DOP:'RD$ ',CRC:'₡ '}};
   var $=function(id){return document.getElementById(id);};
   var LIM={volMax:1e9,costMax:1e6,costMin:0.0001,pctMax:50};
